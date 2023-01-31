@@ -93,26 +93,24 @@
         <form action="javascript:void(0)">
             <fieldset>
                 <p>Melyik szünetre kéred?</p>
-                <input type="radio" name="szunet" id="elso_szunet">
-                <label for="elso_szunet">1. óra után</label>
-                <input type="radio" name="szunet" id="masodik_szunet">
-                <label for="masodik_szunet">2. óra után</label>
-                <input type="radio" name="szunet" id="harmadik_szunet">
-                <label for="harmadik_szunet">3. óra után</label>
-                <input type="radio" name="szunet" id="negyedik_szunet">
-                <label for="negyedik_szunet">4. óra után</label>
-                <input type="radio" name="szunet" id="otodik_szunet">
-                <label for="otodik_szunet">5. óra után</label>
-                <input type="radio" name="szunet" id="hatodik_szunet">
-                <label for="hatodik_szunet">6. óra után</label>
-                <input type="radio" name="szunet" id="hetedik_szunet">
-                <label for="hetedik_szunet">7. óra után</label>
-                <input type="radio" name="szunet" id="nyolcadik_szunet">
-                <label for="nyolcadik_szunet">8. óra után</label>
+                <select name="szun" id="szunet">
+                    <option value="1szun">1. óra után </option>
+                    <option value="2szun">2. óra után </option>
+                    <option value="3szun">3. óra után </option>
+                    <option value="4szun">4. óra után </option>
+                    <option value="5szun">5. óra után </option>
+                    <option value="6szun">6. óra után </option>
+                    <option value="7szun">7. óra után </option>
+                    <option value="8szun">8. óra után </option>
+                </select>
+                <input type="submit" value="RENDELÉS!" onclick="rendel()">
             </fieldset>
         </form>
 
-        <h2>Rendelés ideje: <span id="date-time">idő</span> </h2>
+        <div id="ido" style="display: none;">
+            <h2>Köszönjük a rendelésed!</h2>
+            <p>Rendelésed időpontja: <span id="date-time">idő</span> </p>
+        </div>
 
     </div>
 
@@ -143,6 +141,10 @@
             document.getElementById('ital').style.display = "none"
             document.getElementById('nasi').style.display = "none"
             document.getElementById('egyeb').style.display = "block"
+        }
+
+        function rendel(){
+            document.getElementById('ido').style.display = "block"
         }
 
         var dt = new Date();
