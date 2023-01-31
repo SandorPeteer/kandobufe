@@ -36,6 +36,13 @@
             justify-content: center;
             align-items: center;
         }
+
+        fieldset {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80vw;
+            box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgba(255, 0, 0, 0.566), 0 0 5px rgba(139, 0, 0, 0.527);
+        }
     </style>
 </head>
 
@@ -45,19 +52,19 @@
 
     <div class="menubox">
         <div class="menu">
-            <img src="img/etel.png" alt="ÉTEL MENÜ">
+            <img src="img/etel.png" alt="ÉTEL MENÜ" onclick="etel_kat()">
             <p>ÉTEL</p>
         </div>
         <div class="menu">
-            <img src="img/ital.png" alt="ITAL MENÜ">
+            <img src="img/ital.png" alt="ITAL MENÜ" onclick="ital_kat()">
             <p>ITAL</p>
         </div>
         <div class="menu">
-            <img src="img/nasi.png" alt="NASI MENÜ">
+            <img src="img/nasi.png" alt="NASI MENÜ" onclick="nasi_kat()">
             <p>NASI</p>
         </div>
         <div class="menu">
-            <img src="img/egyeb.webp" alt="EGYÉB MENÜ">
+            <img src="img/egyeb.webp" alt="EGYÉB MENÜ" onclick="egyeb_kat()">
             <p>EGYÉB</p>
         </div>
     </div>
@@ -65,11 +72,79 @@
     <br>
 
     <div class="content">
-        <h2>Rendelés ideje: <span id="date-time" >idő</span> </h2>
+
+        <div id="etel" style="display: none;">
+            <p>kaják</p>
+        </div>
+
+        <div id="ital" style="display: none;">
+            <p>italok</p>
+        </div>
+
+        <div id="nasi" style="display: none;">
+            <p>nasik</p>
+        </div>
+
+        <div id="egyeb" style="display: none;">
+            <p>egyéb</p>
+        </div>
+
+
+        <form action="javascript:void(0)">
+            <fieldset>
+                <p>Melyik szünetre kéred?</p>
+                <input type="radio" name="szunet" id="elso_szunet">
+                <label for="elso_szunet">1. óra után</label>
+                <input type="radio" name="szunet" id="masodik_szunet">
+                <label for="masodik_szunet">2. óra után</label>
+                <input type="radio" name="szunet" id="harmadik_szunet">
+                <label for="harmadik_szunet">3. óra után</label>
+                <input type="radio" name="szunet" id="negyedik_szunet">
+                <label for="negyedik_szunet">4. óra után</label>
+                <input type="radio" name="szunet" id="otodik_szunet">
+                <label for="otodik_szunet">5. óra után</label>
+                <input type="radio" name="szunet" id="hatodik_szunet">
+                <label for="hatodik_szunet">6. óra után</label>
+                <input type="radio" name="szunet" id="hetedik_szunet">
+                <label for="hetedik_szunet">7. óra után</label>
+                <input type="radio" name="szunet" id="nyolcadik_szunet">
+                <label for="nyolcadik_szunet">8. óra után</label>
+            </fieldset>
+        </form>
+
+        <h2>Rendelés ideje: <span id="date-time">idő</span> </h2>
 
     </div>
 
     <script>
+        function etel_kat() {
+            document.getElementById('etel').style.display = "block"
+            document.getElementById('ital').style.display = "none"
+            document.getElementById('nasi').style.display = "none"
+            document.getElementById('egyeb').style.display = "none"
+        }
+
+        function ital_kat() {
+            document.getElementById('etel').style.display = "none"
+            document.getElementById('ital').style.display = "block"
+            document.getElementById('nasi').style.display = "none"
+            document.getElementById('egyeb').style.display = "none"
+        }
+
+        function nasi_kat() {
+            document.getElementById('etel').style.display = "none"
+            document.getElementById('ital').style.display = "none"
+            document.getElementById('nasi').style.display = "block"
+            document.getElementById('egyeb').style.display = "none"
+        }
+
+        function egyeb_kat() {
+            document.getElementById('etel').style.display = "none"
+            document.getElementById('ital').style.display = "none"
+            document.getElementById('nasi').style.display = "none"
+            document.getElementById('egyeb').style.display = "block"
+        }
+
         var dt = new Date();
         document.getElementById('date-time').innerHTML = dt;
     </script>
