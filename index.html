@@ -19,17 +19,18 @@
             min-width: 14vw;
             object-fit: scale-down;
             background-color: white;
+            box-shadow: 5px 10px #888888;
         }
 
         img:hover {
             transform: scale(1.1);
-            border: 4px solid red;
+            box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px red, 0 0 5px darkred;
         }
 
-        .menubox p{
-        font-weight: bold;
+        .menubox p {
+            font-weight: bold;
         }
-        
+
         .menubox {
             display: flex;
             justify-content: center;
@@ -40,7 +41,6 @@
 
 <body style="text-align: center;">
     <h1>KANDÓ BÜFÉ</h1>
-
     <h2>MENÜ</h2>
 
     <div class="menubox">
@@ -62,10 +62,16 @@
         </div>
     </div>
 
-    <p>hello</p>
+    <br>
+
+    <div class="content">
+        <h2>Rendelés ideje: <span id="date-time" >idő</span> </h2>
+
+    </div>
 
     <script>
-
+        var dt = new Date();
+        document.getElementById('date-time').innerHTML = dt;
     </script>
 </body>
 
