@@ -36,7 +36,7 @@
             background-color: white;
             object-fit: scale-down;
         }
-        
+
         @media screen and (max-width: 600px) {
             .card-title {
                 color: rgb(125, 81, 26);
@@ -76,13 +76,26 @@
             max-width: 80vw;
         }
         
+		  .hideg, .meleg {
+				display: flex;
+				flex-wrap: wrap;
+				width: 100vw;
+				padding: 0 5rem;
+		  }
+
         .item {
             border: 1px solid lightgrey;
             border-radius: 5px;
-            margin: 2%;
-            padding: 3vw;
+            margin: 1rem;
+            padding: 1rem;
+				width: 15rem;
         }
         
+		  .item img {
+				max-width: 100%;
+				max-height: 100%;
+		  }
+
         .sticky {
             position: sticky;
             top: 0;
@@ -110,25 +123,25 @@
 
         <div class="menubox">
             <div id="etel_menu" class="card m-2" style="width:400px" onclick="etel_kat()">
-                <img class="card-img-top" src="img/etel.png" alt="ÉTEL" style="width:100%">
+                <img src="img/etel.png" alt="ÉTEL" style="width:100%">
                 <div class="card-body">
                     <h6 class="card-title">ÉTEL</h6>
                 </div>
             </div>
             <div id="ital_menu" class="card m-2" style="width:400px" onclick="ital_kat()">
-                <img class="card-img-top" src="img/ital.png" alt="ITAL" style="width:100%">
+                <img src="img/ital.png" alt="ITAL" style="width:100%">
                 <div class="card-body">
                     <h6 class="card-title">ITAL</h6>
                 </div>
             </div>
             <div id="nasi_menu" class="card m-2" style="width:400px" onclick="nasi_kat()">
-                <img class="card-img-top" src="img/nasi.png" alt="NASI" style="width:100%">
+                <img src="img/nasi.png" alt="NASI" style="width:100%">
                 <div class="card-body">
                     <h6 class="card-title">NASI</h6>
                 </div>
             </div>
             <div id="egyeb_menu" class="card m-2" style="width:400px" onclick="egyeb_kat()">
-                <img class="card-img-top" src="img/egyeb.webp" alt="EGYÉB" style="width:100%">
+                <img src="img/egyeb.webp" alt="EGYÉB" style="width:100%">
                 <div class="card-body">
                     <h6 class="card-title">EGYÉB</h6>
                 </div>
@@ -158,49 +171,53 @@
 
         <div id="etel" style="display: none;">
             <br>
-            <h2>HIDEG ÉTELEK:</h2>
-            <div class="item">
-                <img src="img/sonkas.jpg" alt="sonkas">
-                <div class="leiras">
-                    <p>Sonkás szendvics:</p>
-                    <p>400 Ft</p>
-                    <span style="color: brown;">megvehető: 2 db</span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/rantott.png" alt="rantott">
-                <div class="leiras">
-                    <p>Rántott szendvics:</p>
-                    <p>500 Ft</p>
-                    <span style="color: green;">megvehető: 8 db</span>
-                </div>
-            </div>
+				<h2>HIDEG ÉTELEK:</h2>
+            <div class="hideg">
+					<div class="item">
+						 <img src="img/sonkas.jpg" alt="sonkas">
+						 <div class="leiras">
+							  <p>Sonkás szendvics:</p>
+							  <p>400 Ft</p>
+							  <span style="color: brown;">megvehető: 2 db</span>
+						 </div>
+					</div>
+					<div class="item">
+						 <img src="img/rantott.png" alt="rantott">
+						 <div class="leiras">
+							  <p>Rántott szendvics:</p>
+							  <p>500 Ft</p>
+							  <span style="color: green;">megvehető: 8 db</span>
+						 </div>
+					</div>
+				</div>
             <br>
-            <h2>MELEG ÉTELEK:</h2>
-            <div class="item">
-                <img src="img/pizza.png" alt="pizza">
-                <div class="leiras">
-                    <p>Pizza</p>
-                    <p>600 Ft</p>
-                    <span style="color: brown;">megvehető: 2 db</span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/hambi.png" alt="hambi">
-                <div class="leiras">
-                    <p>Hambi</p>
-                    <p>580 Ft</p>
-                    <span style="color: green;">megvehető: 8 db</span>
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/piritos.jpg" alt="piritos">
-                <div class="leiras">
-                    <p>Pirítós</p>
-                    <p>680 Ft</p>
-                    <span style="color: orange;">megvehető: 5 db</span>
-                </div>
-            </div>
+				<h2>MELEG ÉTELEK:</h2>
+            <div class="meleg">
+					<div class="item">
+						 <img src="img/pizza.png" alt="pizza">
+						 <div class="leiras">
+							  <p>Pizza</p>
+							  <p>600 Ft</p>
+							  <span style="color: brown;">megvehető: 2 db</span>
+						 </div>
+					</div>
+					<div class="item">
+						 <img src="img/hambi.png" alt="hambi">
+						 <div class="leiras">
+							  <p>Hambi</p>
+							  <p>580 Ft</p>
+							  <span style="color: green;">megvehető: 8 db</span>
+						 </div>
+					</div>
+					<div class="item">
+						 <img src="img/piritos.jpg" alt="piritos">
+						 <div class="leiras">
+							  <p>Pirítós</p>
+							  <p>680 Ft</p>
+							  <span style="color: orange;">megvehető: 5 db</span>
+						 </div>
+					</div>
+				</div>
             <br>
         </div>
 
