@@ -22,6 +22,13 @@
             object-fit: scale-down;
         }
         
+        img {
+            max-height: 14vw;
+            min-height: 14vw;
+            background-color: white;
+            object-fit: scale-down;
+        }
+        
         @media screen and (max-width: 600px) {
             .card-title {
                 color: rgb(125, 81, 26);
@@ -46,8 +53,8 @@
         }
         
         .content {
-            display: grid;
-            place-items: center;
+            display: flex;
+            justify-content: center;
         }
         
         .rendel {
@@ -65,7 +72,7 @@
             border: 1px solid brown;
             border-radius: 5px;
             margin: 2%;
-            padding: 20px;
+            padding: 3vw;
         }
     </style>
 </head>
@@ -80,7 +87,7 @@
     </div>
 
 
-    <h1>KANDÓ BÜFÉ</h1>
+    <h1 style="text-shadow: 2px 2px #dc3535ce;">KANDÓ BÜFÉ</h1>
     <h2>MENÜ</h2>
 
     <div class="menubox">
@@ -110,9 +117,6 @@
         </div>
     </div>
 
-
-
-
     <br>
 
     <div class="content">
@@ -128,36 +132,57 @@
                     <img src="img/pizza.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/nasi.png" class="d-block w-100" alt="...">
+                    <img src="img/sonkas.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
         </div>
 
         <div id="etel" style="display: none;">
+            <br>
             <h2>HIDEG ÉTELEK:</h2>
             <div class="item">
-                <p>Sima szendvics:</p>
-                <p>400 Ft</p>
-                <span style="color: brown;">megvehető: X db</span>
+                <img src="img/sonkas.jpg" alt="sonkas">
+                <div class="leiras">
+                    <p>Sonkás szendvics:</p>
+                    <p>400 Ft</p>
+                    <span style="color: brown;">megvehető: 2 db</span>
+                </div>
             </div>
             <div class="item">
-                <p>Rántotthúsos szendvics:</p>
-                <p>500 Ft</p>
-                <span style="color: brown;">megvehető: X db</span>
+                <img src="img/rantott.png" alt="rantott">
+                <div class="leiras">
+                    <p>Rántott szendvics:</p>
+                    <p>500 Ft</p>
+                    <span style="color: brown;">megvehető: 8 db</span>
+                </div>
             </div>
+            <br>
             <h2>MELEG ÉTELEK:</h2>
             <div class="item">
-                <img src="img/hambi.png" alt="hambi">
-                <p>Hamburger:</p>
-                <p>600 Ft</p>
-                <span style="color: brown;">megvehető: X db</span>
+                <img src="img/pizza.png" alt="pizza">
+                <div class="leiras">
+                    <p>Pizza</p>
+                    <p>600 Ft</p>
+                    <span style="color: brown;">megvehető: 2 db</span>
+                </div>
             </div>
             <div class="item">
-                <img src="img/pizza.png" alt="pizza">
-                <p>Pizza:</p>
-                <p>500 Ft</p>
-                <span style="color: brown;">megvehető: X db</span>
+                <img src="img/hambi.png" alt="hambi">
+                <div class="leiras">
+                    <p>Hambi</p>
+                    <p>580 Ft</p>
+                    <span style="color: brown;">megvehető: 8 db</span>
+                </div>
             </div>
+            <div class="item">
+                <img src="img/piritos.jpg" alt="piritos">
+                <div class="leiras">
+                    <p>Pirítós</p>
+                    <p>680 Ft</p>
+                    <span style="color: rgb(42, 165, 56);">megvehető: 5 db</span>
+                </div>
+            </div>
+            <br>
         </div>
 
         <div id="ital" style="display: none;">
@@ -207,6 +232,7 @@
             document.getElementById('ital').style.display = "none"
             document.getElementById('nasi').style.display = "none"
             document.getElementById('egyeb').style.display = "none"
+            document.getElementById('kedvencek').style.display = "none"
             document.getElementById('etel_menu').style.border = "1px solid black"
             document.getElementById('ital_menu').style.border = "1px solid rgba(0, 0, 0, 0.175)"
             document.getElementById('nasi_menu').style.border = "1px solid rgba(0, 0, 0, 0.175)"
@@ -218,6 +244,7 @@
             document.getElementById('ital').style.display = "block"
             document.getElementById('nasi').style.display = "none"
             document.getElementById('egyeb').style.display = "none"
+            document.getElementById('kedvencek').style.display = "none"
             document.getElementById('etel_menu').style.border = "1px solid rgba(0, 0, 0, 0.175)"
             document.getElementById('ital_menu').style.border = "1px solid black"
             document.getElementById('nasi_menu').style.border = "1px solid rgba(0, 0, 0, 0.175)"
@@ -229,6 +256,7 @@
             document.getElementById('ital').style.display = "none"
             document.getElementById('nasi').style.display = "block"
             document.getElementById('egyeb').style.display = "none"
+            document.getElementById('kedvencek').style.display = "none"
             document.getElementById('etel_menu').style.border = "1px solid rgba(0, 0, 0, 0.175)"
             document.getElementById('ital_menu').style.border = "1px solid rgba(0, 0, 0, 0.175)"
             document.getElementById('nasi_menu').style.border = "1px solid black"
@@ -240,6 +268,7 @@
             document.getElementById('ital').style.display = "none"
             document.getElementById('nasi').style.display = "none"
             document.getElementById('egyeb').style.display = "block"
+            document.getElementById('kedvencek').style.display = "none"
             document.getElementById('etel_menu').style.border = "1px solid rgba(0, 0, 0, 0.175)"
             document.getElementById('ital_menu').style.border = "1px solid rgba(0, 0, 0, 0.175)"
             document.getElementById('nasi_menu').style.border = "1px solid rgba(0, 0, 0, 0.175)"
@@ -254,6 +283,7 @@
         var dt = new Date();
         document.getElementById('date-time').innerHTML = dt;
     </script>
+    <br><br><br><br>
 </body>
 
 </html>
