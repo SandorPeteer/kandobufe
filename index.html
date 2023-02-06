@@ -12,7 +12,6 @@
         .menubox {
             display: flex;
             justify-content: center;
-            align-items: center;
             margin: 1%;
         }
         
@@ -23,21 +22,22 @@
             object-fit: scale-down;
         }
         
-        .card p {
-            font-size: 1vw;
-            height: 3vw;
+        @media screen and (max-width: 600px) {
+            .card-title {
+                color: rgb(125, 81, 26);
+                font-size: 2.5vw;
+            }
+        }
+        
+        .card-body {
+            padding-top: 0.5rem;
+            padding-bottom: 0;
+            background-color: #dc35450f;
         }
         
         .content {
             display: grid;
             place-items: center;
-        }
-        
-        .item {
-            margin: 1rem;
-            padding: 0.5rem;
-            border: 2px solid black;
-            border-radius: 2%;
         }
         
         .rendel {
@@ -49,12 +49,13 @@
             margin-left: auto;
             margin-right: auto;
             max-width: 80vw;
-            box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgba(255, 0, 0, 0.566), 0 0 5px rgba(139, 0, 0, 0.527);
         }
         
-        .item:hover {
-            transform: scale(1.02);
-            box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgba(0, 123, 255, 0.566), 0 0 5px rgba(0, 14, 139, 0.651);
+        .item {
+            border: 1px solid brown;
+            border-radius: 5px;
+            margin: 2%;
+            padding: 20px;
         }
     </style>
 </head>
@@ -64,32 +65,28 @@
     <h2>MENÜ</h2>
 
     <div class="menubox">
-        <div id="etel_menu" class="card m-0 bg-light" style="width:240px" onclick="etel_kat()">
+        <div id="etel_menu" class="card m-2" style="width:400px" onclick="etel_kat()">
             <img class="card-img-top" src="img/etel.png" alt="ÉTEL" style="width:100%">
             <div class="card-body">
-                <h4 class="card-title">ÉTEL</h4>
-                <p class="card-text">Hideg és meleg ételek</p>
+                <h6 class="card-title">ÉTEL</h6>
             </div>
         </div>
-        <div id="ital_menu" class="card m-0 bg-light" style="width:240px" onclick="ital_kat()">
+        <div id="ital_menu" class="card m-2" style="width:400px" onclick="ital_kat()">
             <img class="card-img-top" src="img/ital.png" alt="ITAL" style="width:100%">
             <div class="card-body">
-                <h4 class="card-title">ITAL</h4>
-                <p class="card-text">Hideg és meleg italok</p>
+                <h6 class="card-title">ITAL</h6>
             </div>
         </div>
-        <div id="nasi_menu" class="card m-0 bg-light" style="width:240px" onclick="nasi_kat()">
+        <div id="nasi_menu" class="card m-2" style="width:400px" onclick="nasi_kat()">
             <img class="card-img-top" src="img/nasi.png" alt="NASI" style="width:100%">
             <div class="card-body">
-                <h4 class="card-title">NASI</h4>
-                <p class="card-text">Mindenféle ropogtatni való</p>
+                <h6 class="card-title">NASI</h6>
             </div>
         </div>
-        <div id="egyeb_menu" class="card m-0 bg-light" style="width:240px" onclick="egyeb_kat()">
+        <div id="egyeb_menu" class="card m-2" style="width:400px" onclick="egyeb_kat()">
             <img class="card-img-top" src="img/egyeb.webp" alt="EGYÉB" style="width:100%">
             <div class="card-body">
-                <h4 class="card-title">EGYÉB</h4>
-                <p class="card-text">Melegítés és hasonlók</p>
+                <h6 class="card-title">EGYÉB</h6>
             </div>
         </div>
     </div>
