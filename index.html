@@ -9,6 +9,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>KANDÓ BÜFÉ</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        
         .menubox {
             display: flex;
             justify-content: center;
@@ -35,8 +42,8 @@
                 font-size: 2.5vw;
             }
             .signin {
-                width: 32px;
-                height: 32px;
+                width: 48px;
+                height: 48px;
             }
         }
         
@@ -74,6 +81,12 @@
             margin: 2%;
             padding: 3vw;
         }
+        
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: white;
+        }
     </style>
 </head>
 
@@ -82,37 +95,38 @@
 
     <div class="position-relative">
         <svg class="signin position-absolute top-0 end-0" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-        </svg>
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+            </svg>
     </div>
-
-
-    <h1 style="text-shadow: 2px 2px #dc3535ce;">KANDÓ BÜFÉ</h1>
+    <h1 style="color: red; font-weight: bolder;">KANDÓ BÜFÉ</h1>
     <h2>MENÜ</h2>
 
-    <div class="menubox">
-        <div id="etel_menu" class="card m-2" style="width:400px" onclick="etel_kat()">
-            <img class="card-img-top" src="img/etel.png" alt="ÉTEL" style="width:100%">
-            <div class="card-body">
-                <h6 class="card-title">ÉTEL</h6>
+    <div class="sticky">
+
+        <div class="menubox">
+            <div id="etel_menu" class="card m-2" style="width:400px" onclick="etel_kat()">
+                <img class="card-img-top" src="img/etel.png" alt="ÉTEL" style="width:100%">
+                <div class="card-body">
+                    <h6 class="card-title">ÉTEL</h6>
+                </div>
             </div>
-        </div>
-        <div id="ital_menu" class="card m-2" style="width:400px" onclick="ital_kat()">
-            <img class="card-img-top" src="img/ital.png" alt="ITAL" style="width:100%">
-            <div class="card-body">
-                <h6 class="card-title">ITAL</h6>
+            <div id="ital_menu" class="card m-2" style="width:400px" onclick="ital_kat()">
+                <img class="card-img-top" src="img/ital.png" alt="ITAL" style="width:100%">
+                <div class="card-body">
+                    <h6 class="card-title">ITAL</h6>
+                </div>
             </div>
-        </div>
-        <div id="nasi_menu" class="card m-2" style="width:400px" onclick="nasi_kat()">
-            <img class="card-img-top" src="img/nasi.png" alt="NASI" style="width:100%">
-            <div class="card-body">
-                <h6 class="card-title">NASI</h6>
+            <div id="nasi_menu" class="card m-2" style="width:400px" onclick="nasi_kat()">
+                <img class="card-img-top" src="img/nasi.png" alt="NASI" style="width:100%">
+                <div class="card-body">
+                    <h6 class="card-title">NASI</h6>
+                </div>
             </div>
-        </div>
-        <div id="egyeb_menu" class="card m-2" style="width:400px" onclick="egyeb_kat()">
-            <img class="card-img-top" src="img/egyeb.webp" alt="EGYÉB" style="width:100%">
-            <div class="card-body">
-                <h6 class="card-title">EGYÉB</h6>
+            <div id="egyeb_menu" class="card m-2" style="width:400px" onclick="egyeb_kat()">
+                <img class="card-img-top" src="img/egyeb.webp" alt="EGYÉB" style="width:100%">
+                <div class="card-body">
+                    <h6 class="card-title">EGYÉB</h6>
+                </div>
             </div>
         </div>
     </div>
