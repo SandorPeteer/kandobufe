@@ -19,21 +19,28 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-sm-4">
-                <h3>FELUGRÓABLAK</h3>
+                <h3>ÉTELEK:</h3>
 
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#e1">
                     <img src="https://sandorpeteer.github.io/kandobufe/img/etel.png" width="100" height="100" alt="">
                     <p>SAJTBURGER</p>
+                    <p style="color: rgb(255, 198, 152);">500Ft</p>
                 </button>
 
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#e2">
                     <img src="https://sandorpeteer.github.io/kandobufe/img/hambi.png" width="100" height="100" alt="">
-                    <p>SAJTBURGER</p>
+                    <p>HAMBURGER</p>
+                    <p style="color: rgb(228, 255, 152);">400Ft</p>
                 </button>
 
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#e3">
+                    <img src="https://sandorpeteer.github.io/kandobufe/img/pizza.png" width="100" height="100" alt="">
+                    <p>PIZZA</p>
+                    <p style="color: rgb(255, 100, 61);">680Ft</p>
+                </button>
 
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="e1">
                     <div class="modal-dialog">
                         <div class="modal-content">
 
@@ -47,6 +54,16 @@
                             <div class="modal-body">
                                 Mennyit kérsz öcskös?
                                 <input type="number" name="" id=""> db
+                                <br><br>
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="feltet" id="fel_k">
+                                    <label for="fel_k">ketchup</label><br>
+                                    <input type="checkbox" name="feltet" id="fel_m">
+                                    <label for="fel_m">mustár</label><br>
+                                    <input type="checkbox" name="feltet" id="fel_ma">
+                                    <label for="fel_ma">majonéz</label><br>
+                                </fieldset>
                             </div>
 
                             <!-- Modal footer -->
@@ -57,24 +74,106 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-4 bg-light text-secondary">
-                <form action="">
-                    <fieldset>
-                        <legend>SP</legend>
-                        <input type="color" name="" id="">
-                        <input type="color" name="" id="">
-                        <input type="color" name="" id="">
-                        <input type="color" name="" id="">
-                    </fieldset>
 
-                    <img src="img/kor.png" class="rounded-circle" alt="kör">
-                </form>
+                <!-- The Modal -->
+                <div class="modal fade" id="e2">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Hamburger</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                Mennyit kérsz öcskös?
+                                <input type="number" name="" id=""> db
+                                <br><br>
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="feltet" id="fel_k">
+                                    <label for="fel_k">ketchup</label><br>
+                                    <input type="checkbox" name="feltet" id="fel_m">
+                                    <label for="fel_m">mustár</label><br>
+                                    <input type="checkbox" name="feltet" id="fel_ma">
+                                    <label for="fel_ma">majonéz</label><br>
+                                </fieldset>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="e3">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Pizza</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <label for="db">Mennyit kérsz a pizzából?</label><br>
+                                <input type="number" name="db" id="" placeholder="1"> db
+                                <br><br>
+                                <fieldset>
+                                    <legend>feltétek:</legend>
+                                    <input type="checkbox" name="feltet" id="fel_k">
+                                    <label for="fel_k">ketchup</label><br>
+                                    <input type="checkbox" name="feltet" id="fel_m">
+                                    <label for="fel_m">mustár</label><br>
+                                    <input type="checkbox" name="feltet" id="fel_ma">
+                                    <label for="fel_ma">majonéz</label><br>
+                                </fieldset>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">  
+                    <h3>Kedvencek:</h3>
+                    <img src="https://sandorpeteer.github.io/kandobufe/img/piritos.jpg" height="200" width="200" class="rounded-circle" alt="kör">
+                    <br><br>
+                    <p>Frissen sütött pirítós kenyér</p>
+                    <p style="color: rgb(255, 100, 61);">680Ft</p>
+
             </div>
             <div class="col-sm-4">
-                <h3>Column 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <h3>Napi ajánlat:</h3>
+ 
+                <div id="kedvencek" class="carousel slide p-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://sandorpeteer.github.io/kandobufe/img/hambi.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://sandorpeteer.github.io/kandobufe/img/pizza.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://sandorpeteer.github.io/kandobufe/img/sonkas.jpg" class="d-block w-50" alt="...">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
