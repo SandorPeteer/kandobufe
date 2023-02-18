@@ -237,7 +237,8 @@
                                     </div>
                                 </div>
                                 <div class="food-card-button">
-                                    <input type="submit" class="add-bin" value="KOSÁRBA">
+                                    <input type="submit" class="add-bin" value="KÉREM" data-bs-toggle="modal"
+                                        data-bs-target="#e1">
                                 </div>
                             </div>
                         </div>
@@ -285,7 +286,8 @@
                                     </div>
                                 </div>
                                 <div class="food-card-button">
-                                    <input type="submit" class="add-bin" value="KOSÁRBA">
+                                    <input type="submit" class="add-bin" value="KÉREM" ata-bs-toggle="modal"
+                                        data-bs-target="#e2">
                                 </div>
                             </div>
                         </div>
@@ -336,7 +338,8 @@
                                     </div>
                                 </div>
                                 <div class="food-card-button">
-                                    <input type="submit" class="add-bin" value="KOSÁRBA">
+                                    <input type="submit" class="add-bin" value="KÉREM" ata-bs-toggle="modal"
+                                        data-bs-target="#e3">
                                 </div>
                             </div>
                         </div>
@@ -384,7 +387,8 @@
                                     </div>
                                 </div>
                                 <div class="food-card-button">
-                                    <input type="submit" class="add-bin" value="KOSÁRBA">
+                                    <input type="submit" class="add-bin" value="KÉREM" ata-bs-toggle="modal"
+                                        data-bs-target="#e4">
                                 </div>
                             </div>
                         </div>
@@ -394,6 +398,58 @@
         </div>
 
     </div>
+
+
+    <!-- The Modal -->
+    <div class="modal fade" id="e1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Dupla Sajtos Burger</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <fieldset>
+                        <input type="checkbox" name="feltet" id="fel_k">
+                        <label for="fel_k">ketchup</label><br>
+                        <input type="checkbox" name="feltet" id="fel_m">
+                        <label for="fel_m">mustár</label><br>
+                        <input type="checkbox" name="feltet" id="fel_ma">
+                        <label for="fel_ma">majonéz</label><br>
+                    </fieldset>
+                    <br>
+                    <div class="space-between">
+                        <div class="food-card_order-count">
+                            <div class="input-group mb-3 w-25">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary minus-btn" type="button"
+                                        id="button-addon1"><i class="fa fa-minus"></i></button>
+                                </div>
+                                <input type="text" class="form-control input-manulator" placeholder="darab"
+                                    aria-label="darab" aria-describedby="button-addon1" value="1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary add-btn" type="button"
+                                        id="button-addon1"><i class="fa fa-plus"></i></button>
+                                </div>
+                            </div>
+                            <span>680HUF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">KOSÁRBA</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
 </body>
 
