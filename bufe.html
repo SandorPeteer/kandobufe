@@ -188,7 +188,7 @@
     </style>
 </head>
 
-<body>
+<body onload="localStorage.clear(); ar_update(); ">
 
     <div class="container">
         <br>
@@ -220,24 +220,30 @@
                             <hr>
                             <div class="space-between">
                                 <div class="food-card_price">
-                                    <span>800HUF</span>
+                                    <span class="ar_burger1">...</span>
                                 </div>
                                 <div class="food-card_order-count">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <button class="btn btn-outline-secondary minus-btn" type="button"
-                                                id="button-addon1"><i class="fa fa-minus"></i></button>
+                                                id="button-addon1"
+                                                onclick="burger1.value = Number(burger1.value) - 1; ad('burger1',burger1.value)"><i
+                                                    class="fa fa-minus"></i></button>
                                         </div>
-                                        <input type="text" class="form-control input-manulator" placeholder=""
-                                            aria-label="darab" aria-describedby="button-addon1" value="1">
+                                        <input type="text" id="burger1" class="form-control input-manulator"
+                                            placeholder="" aria-label="darab" aria-describedby="button-addon1"
+                                            value="1">
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary add-btn" type="button"
-                                                id="button-addon1"><i class="fa fa-plus"></i></button>
+                                                id="button-addon1"
+                                                onclick="burger1.value = Number(burger1.value) + 1; ad('burger1',burger1.value)"><i
+                                                    class="fa fa-plus"></i></button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="food-card-button">
-                                    <input type="submit" class="add-bin" value="KÉREM" data-bs-toggle="modal"
+                                    <input type="submit" class="add-bin" value="KÉREM"
+                                        onclick="ad('burger1',burger1.value)" data-bs-toggle="modal"
                                         data-bs-target="#e1">
                                 </div>
                             </div>
@@ -269,24 +275,24 @@
                             <hr>
                             <div class="space-between">
                                 <div class="food-card_price">
-                                    <span>600HUF</span>
+                                    <span class="ar_pizza1">...</span>
                                 </div>
                                 <div class="food-card_order-count">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <button class="btn btn-outline-secondary minus-btn" type="button"
-                                                id="button-addon1"><i class="fa fa-minus"></i></button>
+                                                id="button-addon1" onclick="pizza1.value = Number(pizza1.value) - 1; ad('pizza1',pizza1.value)"><i class="fa fa-minus"></i></button>
                                         </div>
-                                        <input type="text" class="form-control input-manulator" placeholder=""
+                                        <input type="text" id="pizza1" class="form-control input-manulator" placeholder=""
                                             aria-label="darab" aria-describedby="button-addon1" value="1">
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary add-btn" type="button"
-                                                id="button-addon1"><i class="fa fa-plus"></i></button>
+                                                id="button-addon1" onclick="pizza1.value = Number(pizza1.value) + 1; ad('pizza1',pizza1.value)"><i class="fa fa-plus"></i></button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="food-card-button">
-                                    <input type="submit" class="add-bin" value="KÉREM" ata-bs-toggle="modal"
+                                    <input type="submit" class="add-bin" value="KÉREM" onclick="ad('pizza1',pizza1.value)" data-bs-toggle="modal"
                                         data-bs-target="#e2">
                                 </div>
                             </div>
@@ -338,7 +344,7 @@
                                     </div>
                                 </div>
                                 <div class="food-card-button">
-                                    <input type="submit" class="add-bin" value="KÉREM" ata-bs-toggle="modal"
+                                    <input type="submit" class="add-bin" value="KÉREM" data-bs-toggle="modal"
                                         data-bs-target="#e3">
                                 </div>
                             </div>
@@ -387,7 +393,7 @@
                                     </div>
                                 </div>
                                 <div class="food-card-button">
-                                    <input type="submit" class="add-bin" value="KÉREM" ata-bs-toggle="modal"
+                                    <input type="submit" class="add-bin" value="KÉREM" data-bs-toggle="modal"
                                         data-bs-target="#e4">
                                 </div>
                             </div>
@@ -410,10 +416,11 @@
                     <h4 class="modal-title">Dupla Sajtos Burger</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                   <img src="https://sandorpeteer.github.io/kandobufe/img/etel.png" alt="" style="min-height: 14vh; max-height: 14vh; min-width: 14vh; max-width: 14vh; object-fit: scale-down;">
+                <img src="https://sandorpeteer.github.io/kandobufe/img/etel.png" alt=""
+                    style="min-height: 14vh; max-height: 14vh; min-width: 14vh; max-width: 14vh; object-fit: scale-down;">
                 <!-- Modal body -->
                 <div class="modal-body">
- 
+
                     <fieldset>
                         <input type="checkbox" name="feltet" id="fel_k">
                         <label for="fel_k">ketchup</label><br>
@@ -427,31 +434,133 @@
                         <div class="food-card_order-count">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary minus-btn" type="button"
-                                        id="button-addon1"><i class="fa fa-minus"></i></button>
+                                    <button class="btn btn-outline-secondary minus-btn" type="button" id="button-addon1"
+                                        onclick="modal_burger1.value = Number(modal_burger1.value) - 1;ad('burger1',modal_burger1.value);"><i
+                                            class="fa fa-minus"></i></button>
                                 </div>
-                                <input type="text" class="form-control input-manulator" placeholder="darab"
-                                    aria-label="darab" aria-describedby="button-addon1" value="1">
+                                <input type="text" id="modal_burger1" class="form-control input-manulator"
+                                    placeholder="darab" aria-label="darab" aria-describedby="button-addon1" value="">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary add-btn" type="button"
-                                        id="button-addon1"><i class="fa fa-plus"></i></button>
+                                    <button class="btn btn-outline-secondary add-btn" type="button" id="button-addon1"
+                                        onclick="modal_burger1.value = Number(modal_burger1.value) + 1;  ad('burger1',modal_burger1.value);"><i
+                                            class="fa fa-plus"></i></button>
                                 </div>
                             </div>
-                            <span>680HUF</span>
+                            <span class="ar_burger1">HUF</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">KOSÁRBA</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                        onclick="kosarba('burger1',modal_burger1.value)">KOSÁRBA</button>
                 </div>
 
             </div>
         </div>
     </div>
 
+    <!-- The Modal -->
+    <div class="modal fade" id="e2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
 
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Pizza</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <img src="https://sandorpeteer.github.io/kandobufe/img/pizza.png" alt=""
+                    style="min-height: 14vh; max-height: 14vh; min-width: 14vh; max-width: 14vh; object-fit: scale-down;">
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <fieldset>
+                        <input type="checkbox" name="feltet" id="fel_k">
+                        <label for="fel_k">ketchup</label><br>
+                        <input type="checkbox" name="feltet" id="fel_m">
+                        <label for="fel_m">mustár</label><br>
+                        <input type="checkbox" name="feltet" id="fel_ma">
+                        <label for="fel_ma">majonéz</label><br>
+                    </fieldset>
+                    <br>
+                    <div class="space-between">
+                        <div class="food-card_order-count">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary minus-btn" type="button" id="button-addon1"
+                                        onclick="modal_pizza1.value = Number(modal_pizza1.value) - 1;ad('pizza1',modal_pizza1.value);"><i
+                                            class="fa fa-minus"></i></button>
+                                </div>
+                                <input type="text" id="modal_pizza1" class="form-control input-manulator"
+                                    placeholder="darab" aria-label="darab" aria-describedby="button-addon1" value="">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary add-btn" type="button" id="button-addon1"
+                                        onclick="modal_pizza1.value = Number(modal_pizza1.value) + 1;  ad('pizza1',modal_pizza1.value);"><i
+                                            class="fa fa-plus"></i></button>
+                                </div>
+                            </div>
+                            <span class="ar_pizza1">HUF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                        onclick="kosarba('pizza1',modal_pizza1.value)">KOSÁRBA</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var _burger1 = 500;
+        var _pizza1 = 780;
+
+        function ar_update() {
+            if (localStorage.getItem('burger1') != null) {
+                const collection = document.getElementsByClassName("ar_burger1");
+                collection[0].innerHTML = _burger1 * Number(localStorage.getItem('burger1')) + "HUF";
+                collection[1].innerHTML = _burger1 * Number(localStorage.getItem('burger1')) + "HUF";
+                collection[0].style.color = "#F47A00";
+                document.getElementById('burger1').value = localStorage.getItem('burger1');
+            } else {
+                const collection = document.getElementsByClassName("ar_burger1");
+                collection[0].innerHTML = _burger1 + "HUF";
+                collection[1].innerHTML = _burger1 + "HUF";
+                collection[0].style.color = "grey";
+            }
+
+            if (localStorage.getItem('pizza1') != null) {
+                const collection = document.getElementsByClassName("ar_pizza1");
+                collection[0].innerHTML = _pizza1 * Number(localStorage.getItem('pizza1')) + "HUF";
+                collection[1].innerHTML = _pizza1 * Number(localStorage.getItem('pizza1')) + "HUF";
+                collection[0].style.color = "#F47A00";
+                document.getElementById('pizza1').value = localStorage.getItem('pizza1');
+            } else {
+                const collection = document.getElementsByClassName("ar_pizza1");
+                collection[0].innerHTML = _pizza1 + "HUF";
+                collection[1].innerHTML = _pizza1 + "HUF";
+                collection[0].style.color = "grey";
+            }
+
+        }
+
+        function ad(nev, ertek) {
+            localStorage.setItem(nev, ertek);
+            document.getElementById('modal_' + nev).value = localStorage.getItem(nev);
+            ar_update();
+        }
+
+        function kosarba(nev, ertek) {
+            localStorage.setItem(nev, ertek);
+            document.getElementById(nev).value = localStorage.getItem(nev);
+            ar_update();
+        }
+    </script>
 </body>
 
 </html>
