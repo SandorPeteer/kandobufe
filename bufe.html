@@ -185,6 +185,7 @@
                 object-fit: cover;
             }
         }
+
     </style>
 </head>
 
@@ -192,9 +193,14 @@
 
     <div class="container">
         <br>
+
+        <i class="fa-solid fa-cart-shopping fa-2x position-relative top-0 float-end">
+            <span id="kosarban" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
+        </i>
+
         <h1 class="text-center text-uppercase">KANDÓ BÜFÉ</h1>
         <br>
-        <br>
+        <hr>
         <div class="row">
 
             <div class="col-sm-6 col-md-6 col-lg-6">
@@ -281,19 +287,24 @@
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <button class="btn btn-outline-secondary minus-btn" type="button"
-                                                id="button-addon1" onclick="pizza1.value = Number(pizza1.value) - 1; ad('pizza1',pizza1.value)"><i class="fa fa-minus"></i></button>
+                                                id="button-addon1"
+                                                onclick="pizza1.value = Number(pizza1.value) - 1; ad('pizza1',pizza1.value)"><i
+                                                    class="fa fa-minus"></i></button>
                                         </div>
-                                        <input type="text" id="pizza1" class="form-control input-manulator" placeholder=""
-                                            aria-label="darab" aria-describedby="button-addon1" value="1">
+                                        <input type="text" id="pizza1" class="form-control input-manulator"
+                                            placeholder="" aria-label="darab" aria-describedby="button-addon1"
+                                            value="1">
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary add-btn" type="button"
-                                                id="button-addon1" onclick="pizza1.value = Number(pizza1.value) + 1; ad('pizza1',pizza1.value)"><i class="fa fa-plus"></i></button>
+                                                id="button-addon1"
+                                                onclick="pizza1.value = Number(pizza1.value) + 1; ad('pizza1',pizza1.value)"><i
+                                                    class="fa fa-plus"></i></button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="food-card-button">
-                                    <input type="submit" class="add-bin" value="KÉREM" onclick="ad('pizza1',pizza1.value)" data-bs-toggle="modal"
-                                        data-bs-target="#e2">
+                                    <input type="submit" class="add-bin" value="KÉREM"
+                                        onclick="ad('pizza1',pizza1.value)" data-bs-toggle="modal" data-bs-target="#e2">
                                 </div>
                             </div>
                         </div>
@@ -521,12 +532,15 @@
         var _pizza1 = 780;
 
         function ar_update() {
+            
+
             if (localStorage.getItem('burger1') != null) {
                 const collection = document.getElementsByClassName("ar_burger1");
                 collection[0].innerHTML = _burger1 * Number(localStorage.getItem('burger1')) + "HUF";
                 collection[1].innerHTML = _burger1 * Number(localStorage.getItem('burger1')) + "HUF";
                 collection[0].style.color = "#F47A00";
                 document.getElementById('burger1').value = localStorage.getItem('burger1');
+                document.getElementById('kosarban').innerHTML = Number(localStorage.getItem('pizza1')) + Number(localStorage.getItem('burger1'));
             } else {
                 const collection = document.getElementsByClassName("ar_burger1");
                 collection[0].innerHTML = _burger1 + "HUF";
@@ -540,6 +554,7 @@
                 collection[1].innerHTML = _pizza1 * Number(localStorage.getItem('pizza1')) + "HUF";
                 collection[0].style.color = "#F47A00";
                 document.getElementById('pizza1').value = localStorage.getItem('pizza1');
+                document.getElementById('kosarban').innerHTML = Number(localStorage.getItem('pizza1')) + Number(localStorage.getItem('burger1'));
             } else {
                 const collection = document.getElementsByClassName("ar_pizza1");
                 collection[0].innerHTML = _pizza1 + "HUF";
